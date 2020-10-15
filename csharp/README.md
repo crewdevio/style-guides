@@ -473,3 +473,41 @@ options.PrecisionDecimals = 7;
 options.UseCache = CacheUsage.DontUseCache;
 DecimalNumber product = CalculateProduct(values, options, completionDelegate: null);
 ```
+
+## Vscode csharp setup
+
+## requirements
+
+- [vscode](https://code.visualstudio.com/download)
+- [dotnet core sdk](https://dotnet.microsoft.com/download)
+
+### extensions
+ - [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+
+ **Config**
+ >**note**: this configuration will be added in `.vscode/settings.json` or in `settings.json` global config
+```json
+ {
+    "csharp.semanticHighlighting.enabled": true,
+    "omnisharp.enableImportCompletion": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.loggingLevel": "warning",
+ }
+```
+  - [Code runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+ 
+   **Config**
+   >**note**: this configuration will be added in `.vscode/settings.json` or in `settings.json` global config
+```json
+ {
+    "code-runner.executorMap": {
+       "csharp": "dotnet run"
+    }
+ }
+```
+ - [Auto-Using for C#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using)
+ - [C# Extensions](https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions)
+ - [Dotnet](https://marketplace.visualstudio.com/items?itemName=leo-labs.dotnet)
+ - [Error lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+ - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+ - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
